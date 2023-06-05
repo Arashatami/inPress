@@ -16,6 +16,7 @@ export const initialState: SearchCityrState = {
   loading: false,
   error: false,
   errorMessage: null,
+  resultCities: []
 };
 
 const reducer = createReducer(

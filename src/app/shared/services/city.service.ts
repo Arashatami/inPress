@@ -16,7 +16,7 @@ export class CityService {
   searchCity(text: string): Observable<CityModel[]> {
     let cities$ = this.cityCacheService.getValue(text);
     if (!cities$) {
-      cities$ = this.http.get<ResponseCityModel>(environment.cityApiUrl + "search?name=" + text).pipe(
+      cities$ = this.http.get<ResponseCityModel>(environment.cityApiUrl + "/search?name=" + text).pipe(
         map(res => res.results),
         shareReplay(1));
       this.cityCacheService.setValue(cities$, text);

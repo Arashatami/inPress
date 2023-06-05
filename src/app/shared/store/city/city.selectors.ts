@@ -4,7 +4,7 @@ import { SearchCityrState, cityFeatureName } from './city.reducer';
 export const searchCityFeatureState = createFeatureSelector<SearchCityrState>(cityFeatureName);
 
 /**
- * Get loginHistories
+ * Get SearchCity
  */
 export const SearchCity = createSelector(
   searchCityFeatureState,

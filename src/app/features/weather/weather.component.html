@@ -1,1 +1,18 @@
-<p>weather works!</p>
+<div class="container">
+  <form action="">
+    <h1>please choice city</h1>
+    <mat-form-field>
+      <mat-select [formControl]="cityCtrl" placeholder="search" #singleSelect>
+        <mat-option>
+          <ngx-mat-select-search [formControl]="cityFilterCtrl"></ngx-mat-select-search>
+        </mat-option>
+        <mat-option *ngFor="let city of filteredCities | async" [value]="city">
+          {{city.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <div class="weather-result">
+    {{(weather | async )|json}}
+  </div>
+</div>

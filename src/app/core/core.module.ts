@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
 import { LayoutComponent } from './components/layout/layout.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,15 +14,15 @@ import { RouterModule } from '@angular/router';
   providers: [],
   imports: [
     CommonModule,
-    BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule
   ],
   exports: [
     LayoutComponent,
     CommonModule,
-    BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ]
 })
 export class CoreModule { }

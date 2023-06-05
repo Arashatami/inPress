@@ -4,9 +4,9 @@ import { WeatherState, weatherFeatureName } from './weather.reducer';
 export const weatherFeatureState = createFeatureSelector<WeatherState>(weatherFeatureName);
 
 /**
- * Get loginHistories
+ * Get Weather
  */
-export const GetloginHistories = createSelector(
+export const GetWeatherSelector = createSelector(
   weatherFeatureState,
   (state: WeatherState) => state.weather
 );
