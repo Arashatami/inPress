@@ -1,3 +1,4 @@
+import { CityModel } from './../../models/city.model';
 import { createAction, props } from '@ngrx/store';
 import { WeatherModel } from '../../models/weather.model';
 
@@ -7,6 +8,7 @@ import { WeatherModel } from '../../models/weather.model';
 
 export const getWeather = createAction(
   '[Weather] Get_Weather'
+  , props<CityModel>()
 );
 export const getWeatherSuccess = createAction(
   '[Weather] Get_Weather_SUCCESS', props<{ weather: WeatherModel }>()

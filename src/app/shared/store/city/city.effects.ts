@@ -10,9 +10,7 @@ import { CityService } from '../../services/city.service';
 
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 
 export class CityEffects {
 
@@ -24,7 +22,7 @@ export class CityEffects {
   searchCity = createEffect(() =>
     this.actions$.pipe(
       ofType(CityActions.searchCity),
-      switchMap((text: string) => this.cityService.searchCity(text).pipe(
+      switchMap((text: { text: string }) => this.cityService.searchCity(text.text).pipe(
         map((resultCities: CityModel[]) => CityActions.searchCitySuccess({ resultCities })),
         catchError(err => of(CityActions.searchCityError({ errorMessage: err })))
       ))

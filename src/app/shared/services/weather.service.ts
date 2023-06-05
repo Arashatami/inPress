@@ -27,6 +27,6 @@ export class WeatherService {
 }
 
 @Injectable()
-class WeatherCacheService extends AbstractCacheService<WeatherModel> { }
+export class WeatherCacheService extends AbstractCacheService<WeatherModel> { }
 
 

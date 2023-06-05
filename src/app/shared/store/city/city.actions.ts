@@ -7,6 +7,7 @@ import { CityModel } from '../../models/city.model';
 
 export const searchCity = createAction(
   '[Weather] Search_City'
+  , props<{ text: string }>()
 );
 export const searchCitySuccess = createAction(
   '[Weather] Search_City_SUCCESS', props<{ resultCities: Array<CityModel> }>()

@@ -27,4 +27,4 @@ export class CityService {
 }
 
 @Injectable()
-class CityCacheService extends AbstractCacheService<CityModel[]> { }
+export class CityCacheService extends AbstractCacheService<CityModel[]> { }

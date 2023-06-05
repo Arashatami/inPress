@@ -1,6 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import * as WeatherActions from './weather.actions';
-import { WeatherModel } from '../models/weather.model';
+import { WeatherModel } from '../../models/weather.model';
 
 export const weatherFeatureName = 'weather';
 

@@ -11,9 +11,7 @@ import { WeatherService } from '../../services/weather.service';
 
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 
 export class WeatherEffects {
 
