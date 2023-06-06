@@ -14,7 +14,6 @@ export class HeaderComponent {
     this.translate.addLangs(['en', 'du']);
     this.lang.valueChanges.pipe(takeUntilDestroyed(), distinctUntilChanged(),
     ).subscribe(res => {
-      debugger
       this.translate.use(res!);
     });
   }
