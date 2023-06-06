@@ -19,7 +19,7 @@ export class WeatherService {
       weather$ = this.http.get<WeatherResponseModel>(environment.weatherApiUrl + `/forecast?latitude=${city.latitude}&longitude=${city.longitude}&current_weather=true`).pipe(
         map(res => res.current_weather),
         shareReplay(1));
-      this.weatherCacheService.setValue(weather$, city);
+      this.weatherCacheService.setValue(weather$, city.id);
     }
     return weather$;
   }
