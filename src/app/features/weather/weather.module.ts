@@ -11,14 +11,15 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WeatherCodePipe } from 'src/app/shared/pipes/weather-code.pipe';
 
 
 @NgModule({
   declarations: [
-    WeatherComponent
+    WeatherComponent,
+    WeatherCodePipe
   ],
   providers: [
     WeatherCacheService,
