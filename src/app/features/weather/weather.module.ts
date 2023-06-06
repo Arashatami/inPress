@@ -14,6 +14,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WeatherCodePipe } from 'src/app/shared/pipes/weather-code.pipe';
+import { CoreModule } from 'src/app/core/core.module';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { WeatherCodePipe } from 'src/app/shared/pipes/weather-code.pipe';
   ],
   imports: [
     CommonModule,
+    TranslateModule,
     WeatherRoutingModule,
     StoreModule.forFeature('weather', weatherReducer),
     StoreModule.forFeature('searchCity', cityReducer),

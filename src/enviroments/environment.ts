@@ -3,3 +3,4 @@ export const environment = {
   cityApiUrl: "https://geocoding-api.open-meteo.com/v1",
   weatherApiUrl: "https://api.open-meteo.com/v1"
 };
+//https://open-meteo.com/
